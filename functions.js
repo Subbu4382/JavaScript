@@ -74,5 +74,5 @@ console.log(greet())
 //   console.log(num*num)
 // }
 const square =(num)=>num*num
-console.log(square(19))
+console.log(square(22))
 
