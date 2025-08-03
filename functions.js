@@ -61,3 +61,18 @@
 // }
 // console.log(odd_even(8))
 
+//  converting named functions to arrow functions
+
+// function greet(){
+//     console.log("Hello, friends")
+// }
+
+const greet=()=> "Hello , friends"
+console.log(greet())
+
+// function square(num){
+//   console.log(num*num)
+// }
+const square =(num)=>num*num
+console.log(square(19))
+
