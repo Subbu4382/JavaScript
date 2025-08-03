@@ -76,3 +76,16 @@ console.log(greet())
 const square =(num)=>num*num
 console.log(square(22))
 
+//  converting arrow functions to named functions
+
+// const sayhi = ()=>console.log("how are you")
+function sayhi(){
+    console.log("How are you")
+}
+sayhi()
+
+// const cube=x=>console.log(x**3)
+function cube(x){
+    console.log(x**3)
+}
+cube(5)
