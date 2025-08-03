@@ -32,3 +32,32 @@
 //     }
 // }
 // loop(5)
+
+
+
+// Arrow Functions
+
+// const greet =()=> "i love you"
+// console.log(greet())
+
+// const mul=(a,b)=> {return a*b}
+// console.log(mul(2,6))
+
+
+// const neg = (num) =>{
+//     if (num<0){
+//         return "negative"
+//     }
+// }
+// console.log(neg(-5))
+
+// const odd_even =(x) =>{
+//     if (x%2==0){
+//         return "even"
+//     }
+//     else{
+//         return "Odd"
+//     }
+// }
+// console.log(odd_even(8))
+
