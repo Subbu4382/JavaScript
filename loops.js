@@ -36,5 +36,5 @@
 // }
 // console.log(res);
 
-var x=Math.ceil(Math.random()*100)
+var x=Math.ceil(Math.random()*1000)
 console.log(x)
