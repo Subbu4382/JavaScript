@@ -94,7 +94,7 @@ cube(5)
 // calling a function as a parameter in another function
 
 function greet(saybye){
-    console.log("hi");
+    console.log("how are you");
     saybye();
 }
 function saybye(){
