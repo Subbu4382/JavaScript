@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Dark mode</title>
 </head>
-<body>
-    <script src="script.js"></script>
+<body style="background-color: white; color:darkblue;" id="body">
+  <div style="text-align: center; margin-top: 100px; font-size: 20px;">
+    <h1>Hello User!</h1>
+    <p>This is theme switching using JavaScript.</p>
+    
+    <button onclick="setDarkMode()">Dark Mode</button>
+    <button onclick="setLightMode()">Light Mode</button>
+  </div>
+
+  <script>
+    function setDarkMode() {
+      let body = document.getElementById("body");
+      body.style.backgroundColor="black";
+      body.style.color = "bisque";
+    }
+    function setLightMode() {
+      let body = document.getElementById("body");
+      body.style.backgroundColor = "white";
+      body.style.color = "darkgreen";
+    }
+  </script>
 </body>
 </html>
