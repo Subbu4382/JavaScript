@@ -10,3 +10,4 @@ fruits[0]='watermelon'
 console.log(fruits)
 fruits.pop()
 console.log(fruits)
+
