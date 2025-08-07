@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess</title>
+    <style>
+        body{
+            background-color:beige;
+        }
+        input{
+            padding: 10px;
+        }
+        button{
+            padding: 10px;
+            cursor: pointer;
+            background-color: rgb(59, 59, 122);
+            color: white;
+            border-radius: 2px;
+        }
+        button:hover{
+            background-color:blue;
+        }
+        h2,h3{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;margin-top: 10%;">
+    <h1 style="font-size: 100px;">?</h1>
+    <h2>Guess The Number Between 1 To 100</h2>
+    <input id="user_input" type="text">
+    <button onclick="guess_number()">Guess</button>
+    <h3 id="message"></h3>
+    </div>
+
+    <script>
+        let x=Math.ceil(Math.random()*100)
+        function guess_number(){
+           let current_value= document.getElementById("user_input").value
+           current_value=parseInt(current_value)
+           if (current_value==x){
+            console.log(document.getElementById("message").innerHTML="your guess is correct")
+           }
+           else if(current_value>x){
+            console.log(document.getElementById("message").innerHTML="your guess is too high")
+           }
+           else if(current_value<x){
+            console.log(document.getElementById("message").innerHTML="your guess is too low")
+           }
+        //    else{
+        //     console.log(document.getElementById("message").innerHTML="Try again")
+        //    }
+        }
+    </script>
+</body>
+</html>
