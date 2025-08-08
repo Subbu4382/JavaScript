@@ -11,3 +11,15 @@ console.log(fruits)
 fruits.pop()
 console.log(fruits)
 
+// arrays
+// push()-Adds element to end of array.
+// pop()-Removes element from end of array.
+// unshift()-Adds element to start of array.
+// shift()-Removes element from start of array.
+// splice()-Add, remove, or replace elements at specific index.
+// slice()-Copies part of an array without changing it.
+// indexof()- Returns first index of a value (or -1 if not found).
+// includes() → Checks if array contains a value.
+// concat() → Merges arrays.
+// isarray()-Checks whether the given value is an array or not. Returns true if it’s an array, otherwise false.
+

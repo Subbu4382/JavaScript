@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 15%;
+            margin-left: 45%;
+            background-color: antiquewhite;
+        }
+        input{
+            padding:10px 25px;
+        }
+        button{
+            padding:10px 40px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="heading">User Login Form</h1>
+        <input id="name" type="text" placeholder="Enter id"><br><br>
+        <input type="password" placeholder="Enter password"><br><br>
+        <button onclick="submit()" >submit</button><br><br>
+        <h3 id="msg"></h3>
+    </div>
+<script>
+document.getElementById("heading").style.color="crimson"
+function submit(){
+   let userid= document.getElementById("name").value
+
+    document.getElementById("msg").textContent=userid +"  Your account is verifing..."
+
+}
+</script>
+</body>
+</html>
