@@ -1,0 +1,143 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Traffic Light</title>
+  <style>
+    .light {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: grey;
+      margin: 10px auto;
+    }
+    .box {
+      width: 80px;
+      padding: 10px;
+      background: black;
+      border-radius: 10px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <div id="red" class="light"></div>
+  <div id="yellow" class="light"></div>
+  <div id="green" class="light"></div>
+</div>
+
+<script>
+
+  let lights = ["red", "yellow", "green"];
+  let i = 0;
+
+  function changeLight() {
+    // reset all to grey
+    lights.forEach(id => document.getElementById(id).style.background = "grey");
+
+    // turn on current light
+    document.getElementById(lights[i]).style.background = lights[i];
+
+    // next light
+    i = (i + 1) % lights.length;
+  }
+
+  setInterval(changeLight, 1000);
+  changeLight(); // start
+
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manual Traffic Light</title>
+  <style>
+    .light {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: grey;
+      margin: 10px auto;
+    }
+    .box {
+      width:100px;
+      height:400px;
+      padding: 10px;
+      background: black;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 15px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #btn-red{
+        background-color: red;
+        color: white;
+    }
+    #btn-yellow{
+        background-color: yellow;
+        color: white;
+    }
+    #btn-green{
+        background-color: green;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Manual Traffic Light Control</h1>
+
+<div class="box">
+  <div id="red" class="light"></div>
+  <div id="yellow" class="light"></div>
+  <div id="green" class="light"></div>
+</div>
+
+<div style="text-align:center;">
+  <button id="btn-red" onclick="turnOn('red')">Red</button>
+  <button id="btn-yellow" onclick="turnOn('yellow')">Yellow</button>
+  <button id="btn-green" onclick="turnOn('green')">Green</button>
+  <h2 id="msg" style="font-style: italic;"></h2>
+</div>
+
+
+<script>
+  function turnOn(color) {
+    // Reset all lights to grey
+    document.getElementById("red").style.background = "grey";
+    document.getElementById("yellow").style.background = "grey";
+    document.getElementById("green").style.background = "grey";
+
+    // Turn on the selected light
+    document.getElementById(color).style.background = color;
+    let message="";
+    if (color=="red"){
+        message="🚫'Please Stop'"
+        document.getElementById("msg").style.color=color
+        document.querySelector("h1").style.color=color
+    }
+    else if (color=="yellow"){
+        message="⚠ 'Get Ready to Move'"
+        document.getElementById("msg").style.color=color
+        document.querySelector("h1").style.color=color
+    }
+    else if (color=="green"){
+        message="✅'Proceed'"
+        document.getElementById("msg").style.color=color
+        document.querySelector("h1").style.color=color
+    }
+
+    document.getElementById("msg").innerHTML=message
+  }
+</script>
+
+</body>
+</html>

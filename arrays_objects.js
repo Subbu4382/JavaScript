@@ -11,6 +11,8 @@ console.log(fruits)
 fruits.pop()
 console.log(fruits)
 
+
+
 // arrays
 // push()-Adds element to end of array.
 // pop()-Removes element from end of array.
