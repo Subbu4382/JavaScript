@@ -4,7 +4,7 @@ function BMI_cal(event){
     let weight=parseFloat(document.getElementById("weight").value)
     height=height*0.01
      
-    if(weight<=0 || height<=0){
+    if(!weight || !height|| weight<=0 || height<=0){
         document.getElementById("result").innerHTML="Please enter a valid number"
         return
     }
