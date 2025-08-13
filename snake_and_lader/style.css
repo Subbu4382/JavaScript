@@ -1,0 +1,40 @@
+
+body {
+    background-color: blanchedalmond;
+}
+
+#heading {
+    text-align: center;
+    color: crimson;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: repeat(10, 1fr);
+    width: 800px; /* fixed board width */
+    /* margin: 0 auto; */
+    margin-left: 25%;
+}
+
+.cell {
+    background-color: rgb(241, 171, 113);
+    border: 1px solid black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.btn {
+    padding: 12px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.person {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}

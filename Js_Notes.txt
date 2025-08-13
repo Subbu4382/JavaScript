@@ -1,0 +1,17 @@
+Global object --> window , this
+     in js everything is an object 
+     console.log("arguments")
+     console-->is an object
+     log -->is a method
+     we have to use (.) notation to access methods in a object
+     and if any method or object is direct method or object to global object(window or this) then we can directly access that method 
+     example: alert(),prompt()
+
+camel case : myNameIs
+sanke case : my_name_is
+kabab case : my-name-is
+paskel case : myNameIs
+
+ 
+
+ 
