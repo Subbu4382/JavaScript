@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div><img src="https://ivi-fertility.com/wp-content/uploads/sites/12/2021/12/BMI-and-infertility-1405x500.png" alt=""></div>
     <form action="">
         <h1>BMI Calculator</h1>
-        <input type="text" placeholder="Enter name"> <br><br>
-        <input type="text" placeholder="Enter height"> <br><br>
-        <input type="text" placeholder="Enter weight"><br><br>
-        <button>Check</button>
+        <input type="text" id="name" placeholder="Enter name"> <br><br>
+        <input type="number" id="height" placeholder="Enter height in cm`s"> <br><br>
+        <input type="number" id="weight" placeholder="Enter weight in kg`s"><br><br>
+        <button type="button"  onclick="BMI_cal(event)">Calculate BMI</button><br><br>
+        <div id="result"></div>
     </form>
     <script src="./script.js"></script>
 </body>
