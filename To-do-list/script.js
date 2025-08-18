@@ -29,9 +29,9 @@ addbutton.addEventListener("click", function () {
 todolist.addEventListener("click", function (event) {
   const clickedElement = event.target;
 
-  if (clickedElement.tagName === "SPAN") {
-    clickedElement.parentNode.classList.toggle("completed");
-  }
+//   if (clickedElement.tagName === "SPAN") {
+//     clickedElement.parentNode.classList.toggle("completed");
+//   }
 
   if (clickedElement.className === "delete-btn") {
     clickedElement.parentNode.remove();
