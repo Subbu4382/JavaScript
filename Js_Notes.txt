@@ -14,6 +14,27 @@ paskel case : myNameIs
 
  
 Object can be called in two ways
-1) Dot notation---object.method() --i some cases we cant use dot notatoion --- example object."full name" we cant access this
+1) Dot notation---object.method()
+  in some cases we cant use dot notatoion 
+  example : object."full name" we cant access this
+  cannot have spaces, special charecters or keys starting with numbers
 2) Square Notation[]--object[method()] 
 
+for non primitive datatypes reference is copied not values in primitive datatypes values are copied
+ 
+Shallow copy/ cloning : 
+object.assign()
+        this method is used to copy the values of all properties from one or more source objects to a target object
+spread operator{...}
+     {
+          ...object
+     }
+     we cant modify existing object using spread operator
+
+deep Copy :
+
+student={
+
+}
+let student1=StructuredClone(student)
+functions will be not cloned while using StructuredClone 
