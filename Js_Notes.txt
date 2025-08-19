@@ -38,3 +38,32 @@ student={
 }
 let student1=StructuredClone(student)
 functions will be not cloned while using StructuredClone 
+
+# Object.keys()--to get keys 
+object.values()--to get values 
+object.items()--to get properties
+
+# Property flags
+    1)Object.freeze()--prevents any changes to an object,including adding,modifying or deleting properties
+                    --it sets configurable,writable to false for all properties of the object
+    2)object.seal()--prevents new properties from being added or existing properties from being deleted but we can update values
+    3)object.preventExtensions()--prevents new properties from being added to an object
+                                --existing properties can still be modified or deleted
+
+"use strict"---makes code in a strict mode and gives errors if there is any minor mistakes
+
+object.getownpropertydiscriptor(objectname,"key")--gives flags of the key in a object
+object.getownpropertydiscriptors(objectname)--gives flage of all keys in a object
+
+every property has three flags:
+     --writable: if true we cna change the property value if false we cant change the value 
+     --enumerable: if true we can access property in loops or methods if false we cant asscess the property
+     --configurable: if false we cant delete the property
+object.defineproperty(objectname,"key",{
+     we can modify the flags
+     writable:false
+     enumerable:false
+     configurable:false
+})
+
+
