@@ -13,5 +13,7 @@ kabab case : my-name-is
 paskel case : myNameIs
 
  
+Object can be called in two ways
+1) Dot notation---object.method() --i some cases we cant use dot notatoion --- example object."full name" we cant access this
+2) Square Notation[]--object[method()] 
 
- 
