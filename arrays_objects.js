@@ -1,17 +1,15 @@
-const fruits=['banana','orange','apple','mango']
-console.log(fruits)
-console.log(fruits[2])
-console.log(fruits.length)
-console.log(fruits[fruits.length-1])
-console.log(typeof(fruits))
-fruits.push("cherry")
-console.log(fruits)
-fruits[0]='watermelon'
-console.log(fruits)
-fruits.pop()
-console.log(fruits)
-
-
+// const fruits=['banana','orange','apple','mango']
+// console.log(fruits)
+// console.log(fruits[2])
+// console.log(fruits.length)
+// console.log(fruits[fruits.length-1])
+// console.log(typeof(fruits))
+// fruits.push("cherry")
+// console.log(fruits)
+// fruits[0]='watermelon'
+// console.log(fruits)
+// fruits.pop()
+// console.log(fruits)
 
 // arrays
 // push()-Adds element to end of array.
@@ -25,3 +23,18 @@ console.log(fruits)
 // concat() → Merges arrays.
 // isarray()-Checks whether the given value is an array or not. Returns true if it’s an array, otherwise false.
 
+// objects
+let calculator = {
+  add: function (a, b) {
+    return a + b;
+  },
+  subtract: function (a, b) {
+    return a - b;
+  },
+  mul: function (a, b) {
+    return a * b;
+  },
+};
+console.log(calculator.add(5, 6));
+console.log(calculator.subtract(5, 6));
+console.log(calculator.mul(5, 6));
