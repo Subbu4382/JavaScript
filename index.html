@@ -9,21 +9,11 @@
     <h1>Hello User!</h1>
     <p>This is theme switching using JavaScript.</p>
     
-    <button onclick="setDarkMode()">Dark Mode</button>
-    <button onclick="setLightMode()">Light Mode</button>
+    <!-- <button onclick="setDarkMode()">Dark Mode</button>
+    <button onclick="setLightMode()">Light Mode</button> -->
+    <button onclick="changeTheme()">changeTheme</button>
   </div>
 
-  <script>
-    function setDarkMode() {
-      let body = document.getElementById("body");
-      body.style.backgroundColor="black";
-      body.style.color = "bisque";
-    }
-    function setLightMode() {
-      let body = document.getElementById("body");
-      body.style.backgroundColor = "white";
-      body.style.color = "darkgreen";
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
