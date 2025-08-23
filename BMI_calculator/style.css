@@ -1,34 +1,55 @@
-body{
-    background-color:#ff4f00;
-    
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("https://ivi-fertility.com/wp-content/uploads/sites/12/2021/12/BMI-and-infertility-1405x500.png") 
+              no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
-img{
-    position: relative;
-    width: 60%;
-    height: 90vh;
+
+.container {
+  background: rgba(0, 0, 0, 0.8); /* Transparent overlay */
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 350px;
 }
-form{
-    margin-top: 10%;
-    text-align: center;
-    position: absolute;
-    left: 65%;
-    top: 4%;
+
+h1 {
+  font-size: 40px;
+  color:#ff4f00;
+  margin-bottom: 20px;
 }
-form>h1{
-    font-size: 50px;
-    color: white;
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
 }
-input{
-    padding: 10px 30px;
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: white;
+  color: #ff4f00;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
 }
-button{
-    padding: 10px 15px;
-    cursor: pointer;
-    background-color:white;
-    color: #ff4f00;
-    font-size: 15px;
+
+button:hover {
+  background-color: #ff4f00;
+  color: white;
 }
-#result{
-    color: white;
-    font-size: 25px;
+
+#result {
+  color: #ff4f00;
+  font-size: 22px;
+  margin-top: 15px;
 }
