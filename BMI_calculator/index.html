@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,5 +17,28 @@
         <div id="result"></div>
     </form>
     <script src="./script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <form action="">
+      <h1>BMI Calculator</h1>
+      <input type="text" id="name" placeholder="Enter name"> <br><br>
+      <input type="number" id="height" placeholder="Enter height in cm"> <br><br>
+      <input type="number" id="weight" placeholder="Enter weight in kg"><br><br>
+      <button type="button" onclick="BMI_cal(event)">Calculate BMI</button><br><br>
+      <div id="result"></div>
+    </form>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>
