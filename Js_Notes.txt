@@ -67,3 +67,8 @@ object.defineproperty(objectname,"key",{
 })
 
 
+foreach()
+map()
+reduce()
+
+addAdjacentElement()
