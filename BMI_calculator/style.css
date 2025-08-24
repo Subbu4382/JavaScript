@@ -28,7 +28,8 @@ input {
   width: 80%;
   padding: 10px;
   margin: 8px 0;
-  border: none;
+  border-width: 3px;
+  border-color: #ff4f00;
   border-radius: 8px;
 }
 

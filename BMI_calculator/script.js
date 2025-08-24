@@ -20,5 +20,5 @@ function BMI_cal(event){
       } else {
         status = "Obesity";
       }
-    document.getElementById("result").innerHTML=`${name} Your BMI is ${bmi.toFixed(2)} Kg/m^2 <br> ${status}`
+    document.getElementById("result").innerHTML=`${name} Your BMI is ${bmi.toFixed(2)} Kg/m^2 <br> 🔸 ${status}`
 }
