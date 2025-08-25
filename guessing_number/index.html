@@ -23,12 +23,13 @@
         }
         h2,h3{
             color: crimson;
+            font-size: 25px;
         }
     </style>
 </head>
 <body>
     <div style="text-align: center;margin-top: 10%;">
-    <h1 style="font-size: 100px;">?</h1>
+    <h1 style="font-size: 80px;">?</h1>
     <h2>Guess The Number Between 1 To 100</h2>
     <input id="user_input" type="text">
     <button onclick="guess_number()">Guess</button>
@@ -41,13 +42,13 @@
            let current_value= document.getElementById("user_input").value
            current_value=parseInt(current_value)
            if (current_value==x){
-            console.log(document.getElementById("message").innerHTML="your guess is correct")
+            console.log(document.getElementById("message").innerHTML=" 🎉 your guess is correct 🎉")
            }
            else if(current_value>x){
-            console.log(document.getElementById("message").innerHTML="your guess is too high")
+            console.log(document.getElementById("message").innerHTML="🔼 your guess is high")
            }
            else if(current_value<x){
-            console.log(document.getElementById("message").innerHTML="your guess is too low")
+            console.log(document.getElementById("message").innerHTML="🔽 your guess is low")
            }
         //    else{
         //     console.log(document.getElementById("message").innerHTML="Try again")
