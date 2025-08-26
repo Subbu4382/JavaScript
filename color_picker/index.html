@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Color picker</title>
     <style>
         body{
             margin-top: 20%;
-            margin-left: 45%;
+            margin-left: 42%;
             background-color:antiquewhite;
+            background: url("https://www.zero88.com/forum/uploads/monthly_2019_11/colour_picker_4way.PNG.c84449e80a36ea60d0ffb0628504590e.PNG")  no-repeat center center/cover;
         }
         button{
             padding:10px 15px;
@@ -34,31 +35,37 @@
             color: white;
             border-radius: 5px;
         }
+        button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 12px rgba(0,0,0,1);
+    }
+         @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     </style>
+   
+
 </head>
 <body>
-     <h1>Color Picker</h1>
+     <h1>Pick Your Color</h1>
     <button class="btn-red" onclick="red()">Red</button>
     <button class="btn-blue"  onclick="blue()">Blue</button>
     <button class="btn-green"  onclick="green()">Green</button>
     <button class="btn-orange"  onclick="orange()">Orange</button>
     <script>
         function red(){
-           document.body.style.backgroundColor="red"
+           document.body.style.background="red"
         }
         function blue(){
-           document.body.style.backgroundColor="blue"
+           document.body.style.background="blue"
         }
         function green(){
-           document.body.style.backgroundColor="green"
+           document.body.style.background="green"
         }
         function orange(){
-           document.body.style.backgroundColor="orange"
+           document.body.style.background="orange"
         }
-// traffic light
-// seasons
-// image sizer
-// calculator
     </script>
 </body>
 </html>
