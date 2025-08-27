@@ -79,5 +79,5 @@ url : Uniform resource locator
 
 fetch: used to request a api call
  API - Application program interface
-
+fetct(url().then)
  
