@@ -72,3 +72,12 @@ map()
 reduce()
 
 addAdjacentElement()
+
+
+url : Uniform resource locator
+    https:(protocol)//www.google.com(domain)/search (file path) ?q=awardspace(parameters)
+
+fetch: used to request a api call
+ API - Application program interface
+
+ 
