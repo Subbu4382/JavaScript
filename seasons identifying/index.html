@@ -1,31 +1,48 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>Season Finder</title>
   <style>
     body {
-       margin-top: 15%;
-       margin-left: 45%;
+       margin-top: 14%;
+       margin-left: 36%;
        background-color: antiquewhite;
     }
+    .container{
+      background-color: white;
+      width: 400px;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+    }
     h1 {
-      font-size: 28px;
+      font-size: 26px;
       color: crimson;
     }
     #season {
-      font-size: 24px;
+      font-size: 22px;
       margin-top: 20px;
+      font-weight: bold;
       color: darkblue;
     }
     input{
-        width: 200px;
-        padding:10px 25px;
+        width:80%;
+        padding:12px;
+        border: 2px solid #dc1a1a;
+        font-size: 16px;
+        outline: none;
     }
     button{
-            padding:10px 20px;
+            padding:12px 20px;
             background-color:crimson;
             color: white;
             cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button:hover{
+          background: darkred;
         }
   </style>
 </head>
@@ -65,108 +82,119 @@
   </script>
 
 </body>
-</html>
+</html> -->
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Season Finder</title>
   <style>
     body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+       margin: 0;
+       padding: 0;
+       font-family: Arial, sans-serif;
+       text-align: center;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       transition: background 0.5s ease-in-out;
+       background-size: cover;
+       background-position: center;
     }
-
-    .container {
-      background: white;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      width: 350px;
-    }
-
     h1 {
-      font-size: 26px;
-      color: crimson;
-      margin-bottom: 20px;
-    }
-
-    input {
-      width: 80%;
-      padding: 12px;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 16px;
-      outline: none;
-    }
-
-    input:focus {
-      border-color: crimson;
-    }
-
-    button {
-      padding: 12px 20px;
-      background: crimson;
+      font-size: 32px;
       color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
+      text-shadow: 2px 2px 4px black;
     }
-
-    button:hover {
-      background: darkred;
-    }
-
     #season {
-      font-size: 22px;
+      font-size: 24px;
       margin-top: 20px;
+      color: yellow;
       font-weight: bold;
-      color: darkblue;
+      text-shadow: 1px 1px 3px black;
+    }
+    input {
+        width: 220px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: none;
+        text-align: center;
+        font-size: 16px;
+    }
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: crimson;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: darkred;
     }
   </style>
 </head>
-<body>
+<body id="bg">
 
-  <div class="container">
-    <h1>🌸 Find the Current Season 🌦️</h1>
-    <input id="month" type="number" placeholder="Enter month (1-12)" min="1" max="12"> <br>
-    <button onclick="showSeason()">Check Season</button>
-    <p id="season"></p>
-  </div>
+  <h1>🌍 Find the Current Season</h1>
+  <input id="month" type="number" placeholder="Enter month (1-12)" min=1 max=12> <br>
+  <button onclick="showSeason()">Submit</button>
+  <p id="season"></p>
 
   <script>
     function getSeason(month) {
       if (month >= 3 && month <= 6) {
-        return "☀️ Summer (March - June)";
+        return "Summer"; // March - June
       } 
       else if (month >= 7 && month <= 9) {
-        return "🌧️ Monsoon (July - September)";
+        return "Monsoon"; // July - Sept
       } 
       else if (month >= 10 && month <= 11) {
-        return "🍂 Autumn (October - November)";
+        return "Autumn"; // Oct - Nov
       } 
       else if (month === 12 || month === 1 || month === 2) {
-        return "❄️ Winter (December - February)";
+        return "Winter"; // Dec - Feb
       }
       else {
-        return "⚠️ Please enter a valid month (1-12)";
+        return null;
       }
     }
 
-    function showSeason() {
+    function showSeason(){
       let month = parseInt(document.getElementById("month").value);
-      document.getElementById("season").innerHTML = getSeason(month);
+      let season = getSeason(month);
+      let display = document.getElementById("season");
+      let body = document.getElementById("bg");
+
+      if(season){
+        display.innerHTML = `☀️ Current Season: ${season}`;
+        
+        // Change background images dynamically
+        if(season === "Summer"){
+          body.style.backgroundImage = "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')";
+        }
+        else if(season === "Monsoon"){
+          body.style.backgroundImage = "url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29')";
+        }
+        else if(season === "Autumn"){
+          body.style.backgroundImage = "url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0')";
+        }
+        else if(season === "Winter"){
+          body.style.backgroundImage = "url('https://images.unsplash.com/photo-1608889175742-1c28e4fda5e3')";
+        }
+      }
+      else{
+        display.innerHTML = "❌ Please enter a valid month (1-12)";
+        body.style.backgroundImage = "none";
+        body.style.backgroundColor = "antiquewhite";
+      }
     }
   </script>
 
 </body>
-</html> -->
+</html>
