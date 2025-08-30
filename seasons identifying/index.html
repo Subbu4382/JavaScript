@@ -1,200 +1,108 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <title>Season Finder</title>
-  <style>
-    body {
-       margin-top: 14%;
-       margin-left: 36%;
-       background-color: antiquewhite;
-    }
-    .container{
-      background-color: white;
-      width: 400px;
-      padding: 40px;
-      border-radius: 15px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 26px;
-      color: crimson;
-    }
-    #season {
-      font-size: 22px;
-      margin-top: 20px;
-      font-weight: bold;
-      color: darkblue;
-    }
-    input{
-        width:80%;
-        padding:12px;
-        border: 2px solid #dc1a1a;
-        font-size: 16px;
-        outline: none;
-    }
-    button{
-            padding:12px 20px;
-            background-color:crimson;
-            color: white;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-        button:hover{
-          background: darkred;
-        }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1>Find the Current Season</h1>
-  <input id="month" type="number" placeholder="Enter month (1-12)" min=1 max=12> <br><br>
-  <button onclick="showSeason()">submit</button>
-  <p id="season"></p>
-  </div>
-
-  <script>
-    function getSeason(month) {
-      // month: 0 = Jan, 11 = Dec
-      if (month >= 3 && month <= 6) {
-        return "Summer ";//(March - June)
-      } 
-      else if (month >= 7 && month <= 9) {
-        return "Monsoon "; //(July - Sept)
-      } 
-      else if (month >= 10 && month <= 11) {
-        return "Autumn "; //(September - November)
-      } 
-      else if (month === 12 || month === 1 || month === 2) {
-        return "Winter "; //(December - February)
-      }
-      else{
-         return "Please enter a valid month (1-12)"
-      }
-    }
-   function showSeason(){
-    let month=parseInt(document.getElementById("month").value)
-    document.getElementById("season").innerHTML=getSeason(month)
-   }
-
-  </script>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Season Finder</title>
-  <style>
-    body {
-       margin: 0;
-       padding: 0;
-       font-family: Arial, sans-serif;
-       text-align: center;
-       height: 100vh;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       transition: background 0.5s ease-in-out;
-       background-size: cover;
-       background-position: center;
-    }
-    h1 {
-      font-size: 32px;
-      color: white;
-      text-shadow: 2px 2px 4px black;
-    }
-    #season {
-      font-size: 24px;
-      margin-top: 20px;
-      color: yellow;
-      font-weight: bold;
-      text-shadow: 1px 1px 3px black;
-    }
-    input {
-        width: 220px;
-        padding: 10px 15px;
-        border-radius: 8px;
-        border: none;
-        text-align: center;
-        font-size: 16px;
-    }
-    button {
-        margin-top: 15px;
-        padding: 10px 20px;
-        background-color: crimson;
-        border: none;
+  <head>
+    <title>Season Finder</title>
+    <style>
+      body {
+        margin-top: 16%;
+        margin-left: 40%;
+        background-color: antiquewhite;
+        background-size: cover;
+        background-position: center;
+        height: 1000vp;
+        transition: background 0.6s ease-in-out;
+      }
+
+      h1 {
+        font-size: 32px;
+        color: black;
+        text-shadow: 5px 5px 4px white;
+      }
+      #season {
+        font-size: 24px;
+        margin-top: 20px;
+        font-weight: bold;
         color: white;
-        font-size: 16px;
+        text-shadow: 3px 4px 4px #111827;
+        margin-left: 12%;
+      }
+      input {
+        width: 250px;
+        padding: 10px 15px;
+        border: none;
         border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        margin-left: 2%;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: rgb(246, 123, 147);
+        color: white;
         cursor: pointer;
-        transition: 0.3s;
-    }
-    button:hover {
-        background-color: darkred;
-    }
-  </style>
-</head>
-<body id="bg">
-
-  <h1>🌍 Find the Current Season</h1>
-  <input id="month" type="number" placeholder="Enter month (1-12)" min=1 max=12> <br>
-  <button onclick="showSeason()">Submit</button>
-  <p id="season"></p>
-
-  <script>
-    function getSeason(month) {
-      if (month >= 3 && month <= 6) {
-        return "Summer"; // March - June
-      } 
-      else if (month >= 7 && month <= 9) {
-        return "Monsoon"; // July - Sept
-      } 
-      else if (month >= 10 && month <= 11) {
-        return "Autumn"; // Oct - Nov
-      } 
-      else if (month === 12 || month === 1 || month === 2) {
-        return "Winter"; // Dec - Feb
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        margin-left: 12%;
       }
-      else {
-        return null;
+      button:hover {
+        background: darkred;
       }
-    }
+    </style>
+  </head>
+  <body id="bg">
+    <div class="container">
+      <h1>Find the Current Season</h1>
+      <input
+        id="month"
+        type="month"
+      />
+      <br /><br />
+      <button onclick="showSeason()">submit</button>
+      <p id="season"></p>
+    </div>
 
-    function showSeason(){
-      let month = parseInt(document.getElementById("month").value);
-      let season = getSeason(month);
-      let display = document.getElementById("season");
-      let body = document.getElementById("bg");
-
-      if(season){
-        display.innerHTML = `☀️ Current Season: ${season}`;
-        
-        // Change background images dynamically
-        if(season === "Summer"){
-          body.style.backgroundImage = "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')";
-        }
-        else if(season === "Monsoon"){
-          body.style.backgroundImage = "url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29')";
-        }
-        else if(season === "Autumn"){
-          body.style.backgroundImage = "url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0')";
-        }
-        else if(season === "Winter"){
-          body.style.backgroundImage = "url('https://images.unsplash.com/photo-1608889175742-1c28e4fda5e3')";
+    <script>
+      function getSeason(month) {
+        // month: 1 = Jan, 12 = Dec
+        if (month >= 3 && month <= 6) {
+          return "Summer"; //(March - June)
+        } else if (month >= 7 && month <= 9) {
+          return "Monsoon"; //(July - Sept)
+        } else if (month >= 10 && month <= 11) {
+          return "Autumn"; //(September - November)
+        } else if (month === 12 || month === 1 || month === 2) {
+          return "Winter"; //(December - February)
+        } else {
+          return "Please enter a valid month (1-12)";
         }
       }
-      else{
-        display.innerHTML = "❌ Please enter a valid month (1-12)";
-        body.style.backgroundImage = "none";
-        body.style.backgroundColor = "antiquewhite";
-      }
-    }
-  </script>
+      function showSeason() {
+        let month = new Date(document.getElementById("month").value).getMonth()+1;
+        let season = getSeason(month);
+        let body = document.getElementById("bg");
+        document.getElementById("season").innerHTML = season;
+        if (season === "Summer") {
+          body.style.backgroundImage =
+            "url('https://wallpaperaccess.com/full/6606132.jpg')";
+        } else if (season === "Monsoon") {
+          body.style.backgroundImage =
+            "url('https://wallpapercave.com/wp/QdPrJ63.jpg')";
+        } else if (season === "Autumn") {
+          body.style.backgroundImage =
+            "url('https://th.bing.com/th/id/R.6b34eed5d6eeaa6a40f8125dcd081a67?rik=7j1w3mtLnz6e2A&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f0%2f3%2ff%2f1371221-large-fall-season-backgrounds-2880x1800-for-phone.jpg&ehk=z0m3B3q8DrjjHYhz%2biUpVj9PE0H1nZHmXvqoWTHFRdA%3d&risl=&pid=ImgRaw&r=0')";
+        } else if (season === "Winter") {
+          body.style.backgroundImage =
+            "url('https://wallpapercave.com/wp/wp7862529.jpg')";
+        } else {
+          document.getElementById("season").innerHTML =
+            "⚠️ Please Select a Month!";
 
-</body>
+          body.style.backgroundImage = "none";
+          body.style.backgroundColor = "antiquewhite";
+        }
+      }
+    </script>
+  </body>
 </html>
+
