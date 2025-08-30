@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,5 +11,151 @@
     <p id="result"></p>
     <Button id="btn">click here</Button>
     <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Your Luck 🎲</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    #btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      background: #ff7eb3;
+      color: white;
+      transition: 0.3s;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+      margin-top: 20px;
+    }
+
+    #btn:hover {
+      background: #ff4f81;
+      transform: scale(1.05);
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      padding: 15px 25px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      min-width: 200px;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    #result.show {
+      opacity: 1;
+    }
+
+    /* Prize Chart */
+    .chart {
+      margin-top: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+      padding: 20px;
+      width: 280px;
+      text-align: left;
+    }
+
+    .chart h2 {
+      margin: 0 0 15px;
+      font-size: 1.3rem;
+      text-align: center;
+      color: #444;
+    }
+
+    .chart ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .chart li {
+      padding: 8px 12px;
+      margin: 5px 0;
+      background: #f3f3f3;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Check Your Luck 🎉</h1>
+  
+  <!-- Prize Chart -->
+  <div class="chart">
+    <h2>🎁 Prize Chart</h2>
+    <ul id="prizeList"></ul>
+  </div>
+
+  <button id="btn">Try Your Luck 🍀</button>
+  <p id="result"></p>
+
+  <script>
+    const btn = document.getElementById("btn");
+    const result = document.getElementById("result");
+    const prizeList = document.getElementById("prizeList");
+
+    const gifts = [
+      "₹100", "₹200", "₹300", "₹400", "₹500",
+      "₹600", "₹700", "₹800", "₹900", "₹1000",
+      "₹1100", "₹1200", "₹1300", "₹1400", "₹1500"
+    ];
+
+    // Display Prize Chart
+    gifts.forEach((gift, index) => {
+      let li = document.createElement("li");
+      li.innerHTML = `🎲 <span>Option ${index + 1}</span> <span>${gift}</span>`;
+      prizeList.appendChild(li);
+    });
+
+    btn.addEventListener("click", function () {
+      // Small "spinning" effect
+      result.classList.remove("show");
+      result.textContent = "Spinning... 🎲";
+      result.classList.add("show");
+
+      setTimeout(() => {
+        let randIndex = Math.floor(Math.random() * gifts.length);
+        let gift = gifts[randIndex];
+        result.textContent = `🎉 Congratulations! You won ${gift}! 🎁`;
+      }, 1000);
+    });
+  </script>
 </body>
 </html>
