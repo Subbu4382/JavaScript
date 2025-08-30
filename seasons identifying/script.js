@@ -16,7 +16,7 @@
         let month = new Date(document.getElementById("month").value).getMonth()+1;
         let season = getSeason(month);
         let body = document.getElementById("bg");
-        document.getElementById("season").innerHTML = season;
+        document.getElementById("season").innerHTML =season;
         if (season === "Summer") {
           body.style.backgroundImage =
             "url('https://wallpaperaccess.com/full/6606132.jpg')";
