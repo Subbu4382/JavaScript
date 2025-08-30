@@ -9,7 +9,7 @@
         } else if (month === 12 || month === 1 || month === 2) {
           return "Winter"; //(December - February)
         } else {
-          return "Please enter a valid month (1-12)";
+          return "Please select a month";
         }
       }
       function showSeason() {
