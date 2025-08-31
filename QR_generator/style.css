@@ -1,0 +1,78 @@
+/* General page style */
+body {
+  font-family: Arial, sans-serif;
+  background: #fff8f0; /* light orange background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container box */
+.container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 320px;
+}
+
+/* Heading text */
+.container p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #e67e22; /* dark orange */
+}
+
+/* Input box */
+.container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 2px solid #f5b971; /* soft orange border */
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.container input:focus {
+  border-color: #e67e22;
+  box-shadow: 0 0 6px rgba(230, 126, 34, 0.4);
+}
+
+/* QR image box */
+#imgbox {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#imgbox img {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #f5b971;
+  border-radius: 10px;
+  padding: 5px;
+  background: #fff8f0;
+}
+
+/* Button */
+button {
+  background: #e67e22; /* dark orange */
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d35400; /* darker orange */
+}
