@@ -28,7 +28,7 @@ body {
 
 .btn {
     padding: 12px;
-    margin: 5px;
+    margin-left: 5px;
     border-radius: 5px;
     cursor: pointer;
 }

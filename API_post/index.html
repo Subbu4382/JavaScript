@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users API Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { color: darkred; }
+    ul { list-style: none; padding: 0; }
+    li { background: #f0f0f0; margin: 8px 0; padding: 10px; border-radius: 5px; }
+    form input, form select, form button {
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Users List</h2>
+  <ul id="usersList"></ul>
+
+  <h2>Add New User</h2>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Enter Name" required>
+    <input type="text" id="email" placeholder="Enter Email" required>
+    <select id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <button type="submit">Add User</button>
+  </form>
+
+  <script>
+    var API_URL = "https://gorest.co.in/public/v2/users";
+    var TOKEN = "Bearer 7667cb5a001e5dcb750e113d3ba2627efe6e91e1f158d2a13d5fe2afcceaa3e0";
+
+    // Show users on the page
+    function showUsers(users) {
+      var list = document.getElementById("usersList");
+      list.innerHTML = "";
+      for (var i = 0; i < users.length; i++) {
+        var user = users[i];
+        var li = document.createElement("li");
+        li.textContent = user.id + " - " + user.name + " (" + user.email + ") - " + user.gender + " - " + user.status;
+        list.appendChild(li);
+      }
+    }
+
+    // Fetch users from API
+    function fetchUsers() {
+      fetch(API_URL, {
+        headers: { Authorization: TOKEN }
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        showUsers(data);
+      })
+      .catch(function(error) {
+        console.error("Error fetching users:", error);
+      });
+    }
+
+    // Add new user
+    function addUser(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var gender = document.getElementById("gender").value;
+
+      // Always unique email
+      var uniqueEmail = email.split("@")[0] + Date.now() + "@gmail.com";
+
+      var newUser = {
+        name: name,
+        email: uniqueEmail,
+        gender: gender,
+        status: "active"
+      };
+
+      fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: TOKEN
+        },
+        body: JSON.stringify(newUser)
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        if (data.id) {
+          alert("User added: " + data.name);
+          fetchUsers(); // refresh list
+        } else {
+          alert("Error: " + JSON.stringify(data));
+        }
+      })
+      .catch(function(error) {
+        console.error("Error adding user:", error);
+      });
+    }
+
+    // Run when page loads
+    document.getElementById("userForm").addEventListener("submit", addUser);
+    fetchUsers();
+  </script>
+</body>
+</html>

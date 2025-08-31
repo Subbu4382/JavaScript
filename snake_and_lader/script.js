@@ -42,10 +42,10 @@
 // }
 
 let players = [
-  { name: "subbu", color: "blue", score: 0 },
-  { name: "balaji", color: "red", score: 0 },
-  { name: "sathish", color: "yellow", score: 0 },
-  { name: "naidu", color: "green", score: 0 },
+  { name: "Player-1", color: "blue", score: 0 },
+  { name: "Player-2", color: "red", score: 0 },
+  { name: "Player-3", color: "yellow", score: 0 },
+  { name: "Player-4", color: "green", score: 0 },
 ];
 
 // Create heading
