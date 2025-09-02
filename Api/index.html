@@ -12,15 +12,21 @@
     }
 .card{
     width: 250px;
-    border: 2px solid brown;
-    margin: 2px;
+    border: 3px solid darkblue;
+    margin: 4px;
     padding: 2px;
     text-align: center;
     background-color: beige;
     color: crimson;
+    border-radius: 10px;
 }
+.card:hover{
+      transform: scale(0.9); /* zoom in 10% */
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* depth */
+    }
 html,body{
     margin-left: 3%;
+    background-color: rgb(79, 207, 250);
 }
 h1{
     text-align: center;
@@ -29,7 +35,7 @@ h1{
 }
 </style>
 <body>
-    <h1> Display User`s Data</h1>
+    <h1> Display User`s Data From FakeStore API</h1>
     <div id="users_data"></div>
     <script src="script.js"></script>
 </body>

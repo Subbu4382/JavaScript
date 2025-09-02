@@ -8,7 +8,7 @@ addbutton.addEventListener("click", function () {
   if (todoText === "") {
     alert("You must write something!");
     return;
-  }
+  } 
 
   const li = document.createElement("li");
 
