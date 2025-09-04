@@ -1,12 +1,13 @@
 let todoinput = document.getElementById("todo-input");
 let addbutton = document.getElementById("add-button");
 let todolist = document.getElementById("todo-list");
+todolist.innerHTML=localStorage.getItem("data")
 
 addbutton.addEventListener("click", function () {
   const todoText = todoinput.value;
 
   if (todoText === "") {
-    alert("You must write something!");
+    alert("write something!");
     return;
   } 
 
@@ -25,15 +26,23 @@ addbutton.addEventListener("click", function () {
   todolist.appendChild(li);
 
   todoinput.value = "";
+  savedata()
 });
-todolist.addEventListener("click", function (event) {
-  const clickedElement = event.target;
+todolist.addEventListener("click", function (e) {
+  
 
-  if (clickedElement.tagName === "SPAN") {
-    clickedElement.parentNode.classList.toggle("completed");
+  if (e.target.tagName === "SPAN") {
+    e.target.parentNode.classList.toggle("completed");
+    savedata()
   }
 
-  if (clickedElement.className === "delete-btn") {
-    clickedElement.parentNode.remove();
+  if (e.target.className === "delete-btn") {
+    e.target.parentNode.remove();
+    savedata()
+    // localStorage.setItem("data",todolist.innerHTML)
   }
 });
+
+function savedata(){
+  localStorage.setItem("data",todolist.innerHTML)
+}
