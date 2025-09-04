@@ -14,11 +14,12 @@ fetch("https://gorest.co.in/public/v2/users", {
       let card = document.createElement("div");
       card.id = `user-${jsondata[i].id}`
       card.classList = "card";
-      card.innerHTML = `<p>${jsondata[i].id} <button onclick="deleteuser(${jsondata[i].id})">Delete</button> </p>
+      card.innerHTML = `<p>${jsondata[i].id}  </p>
                         <p>${jsondata[i].name}</p>
                         <p>${jsondata[i].email}</p>
                         <p>${jsondata[i].gender}</p>
-                        <p>${jsondata[i].status}</p>`;
+                        <p>${jsondata[i].status}</p>
+                        <button onclick="deleteuser(${jsondata[i].id})">Delete</button>`;
       user_container.appendChild(card);
     }
   });
