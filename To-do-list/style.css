@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #7ca2ec;
 }
 
@@ -61,4 +61,117 @@ h1 {
 .completed {
   text-decoration: line-through;
   color: #888;
+} */
+
+/* General reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f4f8; /* Soft light blue/gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50; /* Darker, more professional color */
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow on the input area */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the inner elements don't show rounded corners */
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none; /* No visible border for a cleaner look */
+    background: #fdfdfd;
+    font-size: 1rem;
+    outline: none;
+}
+
+#todo-input:focus {
+    outline: 2px solid #5d9cec; /* A clear focus indicator */
+    outline-offset: -2px;
+}
+
+#add-button {
+    padding: 12px 20px;
+    background-color: #5d9cec; /* A vibrant blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#add-button:hover {
+    background-color: #4a8ad4; /* Slightly darker shade on hover */
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #fafbfc; /* A very light gray for list items */
+    border: 1px solid #e1e8f0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#todo-list li:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.delete-btn {
+    background: #e74c3c; /* Red color for delete button */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #c0392b; /* Darker red on hover */
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #95a5a6; /* Soft gray for completed tasks */
+    font-style: italic;
 }
