@@ -1,0 +1,62 @@
+body {
+    
+    background: linear-gradient(135deg, #fcdda3, #cba8fc); 
+     /* background: linear-gradient(135deg, #ff7e5f, #2c3e50);  */
+    /* Brighter gradient: warm orange-pink to purple */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Elegant shadow */
+}
+
+#left,
+#right {
+    min-height: 350px;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Softer contrasting backgrounds */
+#left {
+    background-color: #ffe5b4; /* Warm peach */
+}
+
+#right {
+    background-color: #e4d1ff; /* Light lavender */
+}
+
+.list {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Orange gradient */
+    color: #ffffff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.list:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.list:active {
+    cursor: grabbing;
+    opacity: 0.85;
+}
