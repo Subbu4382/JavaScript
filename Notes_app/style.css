@@ -1,0 +1,94 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* A bright, cheerful background gradient */
+    background: linear-gradient(135deg, #88bde1, #9edafb);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* Dark text for good contrast */
+    min-height: 100vh;
+    padding-top: 4%;
+    padding-left: 10%;
+}
+
+.container {
+    width: 100%;
+}
+
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a90e2; /* A professional blue for the title */
+    margin-bottom: 20px;
+}
+
+.container h1 img {
+    width: 70px;
+    margin-right: 15px;
+}
+
+.container button {
+    background: #4a90e2; /* Matching the title color */
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    padding: 15px 35px;
+    margin: 25px 0 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: all 0.3s ease;
+}
+
+.container button:hover {
+    background: #0d5fc3;
+    transform: translateY(-2px);
+}
+/* 
+.notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 10px;
+} */
+
+.input-box {
+    width: 600px;
+    margin: 20px;
+    position: relative;
+    padding: 20px;
+    background: #caf1cf; /* Pure white notes */
+    color: #545cf6;
+    min-height: 150px;
+    border-radius: 10px;
+    outline: none;
+    border: 3px solid #2f833a; /* A light gray border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+.input-box:focus {
+    border-color: #4a90e2; /* Blue border on focus */
+    box-shadow: 0 4px 20px rgba(74, 144, 226, 0.8);
+}
+
+.input-box img {
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    opacity: 0.5;
+}
+
+.input-box img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
