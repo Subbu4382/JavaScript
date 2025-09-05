@@ -1,17 +1,21 @@
 /* General page style */
 body {
   font-family: Arial, sans-serif;
-  background: #fff8f0; /* light orange background */
+  background: #fbe7d0; /* light orange background */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
 }
+h1{
+  color: #d35400;
+}
 
 /* Container box */
 .container {
-  background: #ffffff;
+  background: #d1f8d7;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
