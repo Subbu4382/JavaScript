@@ -1,0 +1,101 @@
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body and Container */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige; /* Deep blue-gray gradient */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Calculator Styling */
+.calculator {
+  background: rgba(9, 222, 87, 0.358); /* Darker, slightly transparent background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(51, 203, 158, 0.8); /* Stronger shadow for depth */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border for the glassy effect */
+}
+
+/* Button Styling */
+.calculator form input {
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border-radius: 12px;
+  font-size: 20px;
+  color: #fff;
+  background: rgba(24, 130, 235, 0.441); /* Button background */
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.518),
+              inset 4px 4px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.calculator form input:hover {
+  background: rgba(22, 125, 229, 0.723); /* Hover effect */
+  transform: scale(1.05);
+}
+
+/* Display Input */
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 0;
+}
+
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 30px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5); /* Darker, more prominent display */
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.1),
+              inset 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Special buttons */
+form input[value="="] {
+  background: #ec6a5c; /* A deep red for the equals sign */
+  color: #fff;
+  font-weight: bold;
+}
+
+form input[value="="]:hover {
+  background: #c0392b;
+}
+
+form input[value="AC"],
+form input[value="DE"],
+form input[value="%"],
+form input[value="/"],
+form input[value="*"],
+form input[value="-"],
+form input[value="+"] {
+  background: #2ecc71; /* A vibrant green for operators */
+  color: #fff;
+  font-weight: bold;
+}
+
+form input[value="AC"]:hover,
+form input[value="DE"]:hover {
+  background: #f1620f; /* A bright yellow for clear/delete hover */
+}
