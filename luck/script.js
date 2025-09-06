@@ -2,7 +2,7 @@ const btn=document.getElementById("btn")
 const result=document.getElementById("result")
 const gifts=[
     "100rs",
-      "2000rs",
+      "200rs",
       "300rs",
       "400rs",
       "500rs",
