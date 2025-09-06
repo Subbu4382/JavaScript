@@ -5,12 +5,17 @@ body {
     /* Brighter gradient: warm orange-pink to purple */
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
 }
-
+h1{
+    font-size: 40px;
+    color: coral;
+    text-shadow: 0 10px 30px rgb(158, 47, 249,0.5);
+}
 
 .container {
     display: flex;
