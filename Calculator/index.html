@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Calculator</h1>
     <div class="container">
         <div class="calculator">
             <form action="">
@@ -17,7 +18,7 @@
                     <input type="button" value="AC" onclick="display.value=''">
                     <input type="button" value="DE" onclick="display.value=display.value.toString().slice(0,-1)">
                     <input type="button" value="%" onclick="display.value+='%'">
-                    <input type="button" value="/">
+                    <input type="button" value="/" onclick="display.value+='/'">
                 </div>
                 <div>
                     <input type="button" value="7"  onclick="display.value+='7'">

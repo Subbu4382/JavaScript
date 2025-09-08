@@ -10,9 +10,15 @@
 body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: beige; /* Deep blue-gray gradient */
+}
+h1{
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: #c0392b;
 }
 
 .container {
