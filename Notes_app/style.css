@@ -24,7 +24,7 @@ body {
     align-items: center;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #4a90e2; /* A professional blue for the title */
+    color: #06356b; /* A professional blue for the title */
     margin-bottom: 20px;
 }
 
@@ -59,36 +59,71 @@ body {
 } */
 
 .input-box {
-    width: 600px;
+    width: 500px;
     margin: 20px;
     position: relative;
-    padding: 20px;
-    background: #caf1cf; /* Pure white notes */
-    color: #545cf6;
+    padding: 20px 50px 20px 20px; /* extra space for delete icon */
+    background: #caf1cf;
+    color: #333;
     min-height: 150px;
     border-radius: 10px;
-    outline: none;
-    border: 3px solid #2f833a; /* A light gray border */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    border: 3px solid #2f833a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
+    animation: fadeIn 0.4s ease; /* fade-in when created */
 }
 
-.input-box:focus {
-    border-color: #4a90e2; /* Blue border on focus */
-    box-shadow: 0 4px 20px rgba(74, 144, 226, 0.8);
+/* Editable note text */
+.input-box p {
+    min-height: 80px;
+    outline: none;
+    font-size: 1rem;
+    color: #06356b;
 }
 
-.input-box img {
-    width: 25px;
+/* Delete icon */
+.input-box .delete-btn {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    top: 12px;
+    right: 12px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    opacity: 0.5;
+    opacity: 0.6;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
-.input-box img:hover {
-    transform: scale(1.1);
+.input-box .delete-btn:hover {
+    transform: scale(1.2);
     opacity: 1;
+}
+
+/* Card hover effect */
+.input-box:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Fade-in animation for new notes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade-out effect (you can trigger via JS before remove) */
+.fade-out {
+    animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
 }
