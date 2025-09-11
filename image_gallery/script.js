@@ -2,18 +2,18 @@ let scrollContainer = document.querySelector(".gallery");
 let backbtn = document.getElementById("backbtn");
 let nextbtn = document.getElementById("nextbtn");
 
+// Mouse wheel scroll (horizontal)
 scrollContainer.addEventListener("wheel", (evt) => {
   evt.preventDefault();
   scrollContainer.scrollLeft += evt.deltaY;
-  scrollContainer.style.scrollBehaviour = "auto";
 });
 
+// Next button
 nextbtn.addEventListener("click", () => {
-  scrollContainer.style.scrollBehaviour = "smooth";
   scrollContainer.scrollLeft += 900;
 });
 
+// Back button
 backbtn.addEventListener("click", () => {
-  scrollContainer.style.scrollBehaviour = "smooth";
   scrollContainer.scrollLeft -= 900;
 });
