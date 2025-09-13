@@ -5,7 +5,9 @@ let btn = document.getElementById("search-btn");
 
 btn.addEventListener("click", () => {
   let inp_word = document.getElementById("inp-word").value;
-
+  if (inp_word==""){
+    alert("Enter any Word.....")
+  }
   fetch(`${url}${inp_word}`)
     .then((res) => res.json())
     .then((data) => {

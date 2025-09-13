@@ -12,12 +12,16 @@
 /* Body and Background */
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #2e3134, #505456);
+  background: linear-gradient(135deg, #0d0e0e);
 }
-
+h1{
+    color: antiquewhite;
+    margin-bottom: 30px;
+}
 /* Main Container */
 .container {
   background-color: antiquewhite;
