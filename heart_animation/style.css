@@ -1,12 +1,13 @@
 body{
     margin:0;
     padding: 0;
+    height: 100vh;
     background-color: rgb(71, 156, 231);
 }
  span{
-    background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_ 54-512.png");
-    width: 100px;
-    height: 100px;
+    background: url("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-512.png");
+    width: 80px;
+    height: 80px;
     position: absolute;
     pointer-events: none;
     background-size: cover;
