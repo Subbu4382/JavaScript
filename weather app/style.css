@@ -14,7 +14,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background 1s ease-in-out;
+  background-color: cadetblue;
+  /* transition: background 1s ease-in-out; */
 }
 
 /* Glassmorphism container */
@@ -41,7 +42,7 @@ body {
 .search input {
   flex: 1;
   padding: 0 15px;
-  font-size: 15px;
+  font-size:15px;
   border: none;
   outline: none;
   border-radius: 10px 0 0 10px;
@@ -65,7 +66,7 @@ body {
 }
 
 .search button:hover {
-  background: rgba(107, 91, 232, 0.45);
+  background: rgba(91, 232, 129, 0.45);
 }
 
 /* Error message */
@@ -111,7 +112,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #0b7d2a;
+  color: #fafdfb;
 }
 
 .col img {
@@ -121,5 +122,5 @@ body {
 }
 
 .col p {
-  font-size: 16px;
+  font-size: 14px;
 }

@@ -30,25 +30,25 @@ document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
     } else if (data.weather[0].main == "Rain") {
       weathericon.src = "rain.png";
        document.body.style.backgroundImage =
-        "url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29')";
+        "url('https://wallpapercave.com/wp/wTacujH.jpg')";
     } else if (data.weather[0].main == "Drizzle") {
       weathericon.src = "drizzle.png";
        document.body.style.backgroundImage =
-        "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')";
+        "url('https://rare-gallery.com/thumbs/1096598-sunlight-trees-landscape-forest-hill-nature-grass-rain-green-morning-mist-shrubs-haze-tree-fog-weather-plant-meadow-woodland-rural-area-habitat-natural-environment-atmo.jpg')";
     } else if (data.weather[0].main == "Mist") {
       weathericon.src = "mist.png";
             document.body.style.backgroundImage =
-        "url('https://images.unsplash.com/photo-1502082553048-f009c37129b9')";
+        "url('https://wallpapers.com/images/hd/mist-over-mountains-hd-scenery-wpbksf5lnq6nan5r.jpg')";
 
     }else {
       // default background
       document.body.style.backgroundImage =
-        "url('https://images.unsplash.com/photo-1503264116251-35a269479413')";
+        "url('https://png.pngtree.com/thumb_back/fh260/background/20230818/pngtree-a-picture-of-buildings-and-a-city-with-a-haze-image_13047698.jpg')";
     }
      document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.transition = "background 1s ease-in-out";
-    
+
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
   }
