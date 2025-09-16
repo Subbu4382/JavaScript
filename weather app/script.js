@@ -21,15 +21,34 @@ document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
     if (data.weather[0].main == "Clouds") {
       weathericon.src = "clouds.png";
+       document.body.style.backgroundImage =
+        "url('https://images.unsplash.com/photo-1501630834273-4b5604d2ee31')";
     } else if (data.weather[0].main == "Clear") {
       weathericon.src = "clear.png";
+      document.body.style.backgroundImage =
+        "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')";
     } else if (data.weather[0].main == "Rain") {
       weathericon.src = "rain.png";
+       document.body.style.backgroundImage =
+        "url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29')";
     } else if (data.weather[0].main == "Drizzle") {
       weathericon.src = "drizzle.png";
+       document.body.style.backgroundImage =
+        "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')";
     } else if (data.weather[0].main == "Mist") {
       weathericon.src = "mist.png";
+            document.body.style.backgroundImage =
+        "url('https://images.unsplash.com/photo-1502082553048-f009c37129b9')";
+
+    }else {
+      // default background
+      document.body.style.backgroundImage =
+        "url('https://images.unsplash.com/photo-1503264116251-35a269479413')";
     }
+     document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.transition = "background 1s ease-in-out";
+    
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
   }
