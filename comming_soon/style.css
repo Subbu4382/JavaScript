@@ -12,7 +12,8 @@
     position: relative;
 }
 .logo{
-    width: 120px;
+    width: 100px;
+     border-radius: 50%;
     padding: 20px 0;
     cursor: pointer;
 }
@@ -54,6 +55,20 @@
     font-size: 60px;
     margin-bottom: 14px;
 }
-/* .rocket{
-    width: 250px;
-} */
+.rocket{
+    width: 350px;
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+}
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 105%;
+        opacity: 1;
+    }
+}
