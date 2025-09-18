@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .container{
     width: 100vw;
@@ -58,7 +59,7 @@
 .rocket{
     width: 350px;
     position: absolute;
-    right: 20%;
+    right: 10%;
     bottom: 0;
     animation: rocket 4s linear infinite;
 }
